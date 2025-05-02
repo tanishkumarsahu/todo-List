@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #1a3c34;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.task {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.task label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+#input {
+  flex: 1;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  border: 2px solid #1a3c34;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#input:focus {
+  border-color: #00a8a8;
+}
+
+.addButton {
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  background-color: #00a8a8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #008b8b;
+  transform: translateY(-2px);
+}
+
+#list {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+li.completed {
+  background-color: #e0f0e9;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.delete {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.delete:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .task {
+    flex-direction: column;
+  }
+
+  .addButton {
+    width: 100%;
+  }
+}
